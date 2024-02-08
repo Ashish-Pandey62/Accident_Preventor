@@ -65,12 +65,12 @@ while True:
             #status2 = classes[pred2.argmax(axis=-1)[0]]
             break
 
-        # If the eyes are closed, start counting
+        # closed eyes?, start counting
         if status1 == 2 and status2 == 2:
         
             count += 1
             cv2.putText(frame, "Eyes Closed, Frame count: " + str(count), (10, 30), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 1)
-            # if eyes are closed for 10 consecutive frames, start the alarm
+            #  count >=10 then alarm , count = no of frames in which eyes are closed
             if count >= 10:
                 cv2.putText(frame, "Drowsiness Alert!!!", (100, height-20), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
                 if not alarm_on:
