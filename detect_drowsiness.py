@@ -18,7 +18,7 @@ face_cascade = cv2.CascadeClassifier("data/haarcascade_frontalface_default.xml")
 left_eye_cascade = cv2.CascadeClassifier("data/haarcascade_lefteye_2splits.xml")
 right_eye_cascade = cv2.CascadeClassifier("data/haarcascade_righteye_2splits.xml")
 cap = cv2.VideoCapture(0)
-model = load_model("drowiness_new7.h5")
+model = load_model("drowiness_model.h5")
 count = 0
 alarm_on = False
 alarm_sound = "data/alarm.mp3"
@@ -49,7 +49,7 @@ while True:
             pred1 = model.predict(eye1)
             status1=np.argmax(pred1)
             #print(status1)
-            #status1 = classes[pred1.argmax(axis=-1)[0]]
+           
             break
 
         for (x2, y2, w2, h2) in right_eye:
@@ -62,7 +62,7 @@ while True:
             pred2 = model.predict(eye2)
             status2=np.argmax(pred2)
             #print(status2)
-            #status2 = classes[pred2.argmax(axis=-1)[0]]
+            # status2 = classes[pred2.argmax(axis=-1)[0]]
             break
 
         # closed eyes?, start counting
@@ -72,7 +72,7 @@ while True:
             cv2.putText(frame, "Eyes Closed, Frame count: " + str(count), (10, 30), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 1)
             #  count >=10 then alarm , count = no of frames in which eyes are closed
             if count >= 10:
-                cv2.putText(frame, "Drowsiness Alert!!!", (100, height-20), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
+                cv2.putText(frame, "Alert!!!", (100, height-20), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
                 if not alarm_on:
                     alarm_on = True
                     # play the alarm sound in a new thread
