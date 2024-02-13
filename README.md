@@ -1,34 +1,46 @@
-### readme file is not completed.......
 
 # Drowsiness Detection System
 
-## Description
-The Drowsiness Detection System is a Python-based application that utilizes computer vision and machine learning techniques to detect signs of drowsiness in individuals, particularly focusing on eye closure patterns. The system processes video streams from webcams, analyzes facial landmarks, and monitors eye behavior in real-time. When drowsiness is detected, the system raises alerts to help prevent potential accidents, especially in scenarios like driving or operating heavy machinery.
+The Drowsiness Detection System is a Python-based application that utilizes computer vision and machine learning techniques to detect signs of drowsiness in individuals, particularly focusing on eye closure patterns. The system processes video streams from webcams, analyzes facial landmarks, and monitors eye behavior in real-time. When drowsiness is detected, the system raises alerts to help prevent potential accidents, especially in scenarios like driving or operating heavy machinery
 
-## Author
-This project is authored by (https://github.com/Ashish-Pandey62).
+## Authors
 
-## Installation and Usage
-To install and run the Drowsiness Detection System, follow these steps:
+- [@Ashish_Pandey](https://github.com/Ashish-Pandey62)
 
-### Prerequisites
-- Python 3.x
-- OpenCV (cv2)
-- NumPy
-- mediapipe
-- keras
-- playsound
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone [repository_URL]
-   2. Navigate to the project directory:
+## Documentation
 
-3. Install the required Python packages using pip:
+[Documentation](https://linktodocumentation)
 
-### Usage
-1. Make sure your webcam is connected and accessible.
-2. Run the main script:
-python drowsiness_detection.py
 
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm run deploy
+```
+
+
+## Installation
+
+Clone the repo:
+
+```bash
+git clone https://github.com/Ashish-Pandey62/Accident_Preventor
+
+```
+Go to required directory 
+```bash
+cd Accident_Preventor
+```
+Install the necessary dependencies :
+```bash
+pip install -r requirements.txt
+
+```
+Run the script :
+```bash
+python main.py
+```
+    
