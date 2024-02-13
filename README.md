@@ -8,18 +8,7 @@ The Drowsiness Detection System is a Python-based application that utilizes comp
 - [@Ashish_Pandey](https://github.com/Ashish-Pandey62)
 
 
-## Documentation
 
-[Documentation](https://linktodocumentation)
-
-
-## Deployment
-
-To deploy this project run
-
-```bash
-  npm run deploy
-```
 
 
 ## Installation
